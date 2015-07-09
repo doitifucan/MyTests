@@ -18,11 +18,13 @@ class ProductsController extends AppController {
 
     public function index() {
         $this->Product->recursive = -1;
+		print_r("Hello I am Here");
         $this->set('products', $this->paginate());
     }
 
     public function view($id) {
         if (!($product = $this->Product->findById($id))) {
+			print_r("Throwing Exception");
             throw new NotFoundException(__('Product not found'));
         }
         $this->set(compact('product'));
