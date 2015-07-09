@@ -26,6 +26,8 @@ class ProductsController extends AppController {
 
     public function view($id) {
 		print_r("Hello123");
+		print_r("Hello123");
+		print_r("Hello123");
         if (!($product = $this->Product->findById($id))) {
 			print_r("Throwing Exception");
             throw new NotFoundException(__('Product not found'));
