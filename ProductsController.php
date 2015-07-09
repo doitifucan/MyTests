@@ -29,6 +29,7 @@ class ProductsController extends AppController {
 		print_r("Hello123");
 		print_r("Hello123");
 		print_r("Hello123");
+		print_r("Master added");
         if (!($product = $this->Product->findById($id))) {
 			print_r("Hello123");
 			print_r("Throwing Exception");
