@@ -30,6 +30,7 @@ class ProductsController extends AppController {
 			print_r("Throwing Exception");
             throw new NotFoundException(__('Product not found'));
         }
+		print_r("5th Gen");
         $this->set(compact('product'));
 		print_r("Hello456");
     }
