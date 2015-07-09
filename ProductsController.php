@@ -20,6 +20,7 @@ class ProductsController extends AppController {
 		print_r("Hello");
         $this->Product->recursive = -1;
 		print_r("Hello I am Here");
+		print_r("ThunderBird");
         $this->set('products', $this->paginate());
 		print_r("Bye");
     }
@@ -28,6 +29,7 @@ class ProductsController extends AppController {
 		print_r("Hello123");
         if (!($product = $this->Product->findById($id))) {
 			print_r("Throwing Exception");
+			print_r("GOGOGOGOGOOG");
             throw new NotFoundException(__('Product not found'));
         }
         $this->set(compact('product'));
