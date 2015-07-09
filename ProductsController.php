@@ -17,17 +17,21 @@ class ProductsController extends AppController {
     );
 
     public function index() {
+		print_r("Hello");
         $this->Product->recursive = -1;
 		print_r("Hello I am Here");
         $this->set('products', $this->paginate());
+		print_r("Bye");
     }
 
     public function view($id) {
+		print_r("Hello123");
         if (!($product = $this->Product->findById($id))) {
 			print_r("Throwing Exception");
             throw new NotFoundException(__('Product not found'));
         }
         $this->set(compact('product'));
+		print_r("Hello456");
     }
 
 }

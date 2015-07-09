@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+</head>
+<body>
+<script>
+$(document).ready(function(){
+	$("#getD").on("click",function(e){
+		alert(123);
+		$.ajax({
+			url: 'http://dev.eventsnow.com/guests/prepareJsonFromExcel',
+			contentType: false,
+			processData: false,
+			type:'jsonp',
+			type: 'GET',
+			success: function(data){
+				console.log(data);	
+				alert(data);
+			}
+		});
+	});
+});
+</script>
+<label>Company</label>
+<input type="text" name="gcompany_or_community_name_0_2436" id="gcompany_or_community_name_0_2436"/>
+<label>First Name</label>
+<input type="text" name="gfirst_name_0_2436" id="gfirst_name_0_2436"/>
+<label>Last Name</label>
+<input type="text" name="glast_name_0_2436" id="glast_name_0_2436"/>
+<label>Gender</label>
+<input type="radio" name="ggender_0_2436" id="ggender_0_2436" value="Male"/>
+<input type="radio" name="ggender_0_2436" id="ggender_0_2436" value="Female"/>
+<label>Phone</label>
+<input type="text" name="gphone_0_2436" id="gphone_0_2436"/>
+<label>Email</label>
+<input type="text" name="gemail_0_2436" id="gemail_0_2436"/>
+<label>Height</label>
+<input type="text" name="gheight_0_2436" id="gheight_0_2436"/>
+<input type="button" id="getD" name="getD""/>
+</body>
+</html>
